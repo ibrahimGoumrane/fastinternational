@@ -521,7 +521,7 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>+33 1 XX XX XX XX</span>
+                            <span>+33 1 86 95 49 21</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-fax"></i>
