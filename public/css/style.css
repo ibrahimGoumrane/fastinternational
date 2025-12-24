@@ -2449,6 +2449,24 @@ button {
   font-weight: 500;
 }
 
+/* reCAPTCHA Styles */
+.recaptcha-group {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.recaptcha-group .g-recaptcha {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.recaptcha-group.has-error .g-recaptcha {
+  border: 2px solid var(--danger-color);
+  border-radius: var(--radius-md);
+  padding: 5px;
+  background: rgba(239, 68, 68, 0.03);
+}
+
 .contact-info-container {
   display: flex;
   flex-direction: column;

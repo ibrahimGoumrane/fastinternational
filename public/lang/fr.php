@@ -414,6 +414,8 @@ return [
     "error_message" => "Erreur lors de l'envoi du message. Veuillez réessayer.",
     "required_field" => "Ce champ est requis",
     "invalid_email" => "Adresse email invalide",
+    "recaptcha_required" => "Veuillez compléter la vérification reCAPTCHA.",
+    "recaptcha_failed" => "La vérification reCAPTCHA a échoué. Veuillez réessayer.",
     
     // PayPal
     "paypal_title" => "Paiement Sécurisé",

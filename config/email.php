@@ -23,6 +23,12 @@ $emailConfig = [
         'admin_subject' => 'Nouveau message - FAST International: {subject}',
         'user_subject' => 'Confirmation de reception - FAST International',
         'signature' => 'FAST International - Formation Conseil Developpement | mail@formafast.com'
-    ]
+    ],
+    
+    // reCAPTCHA Configuration
+    // Get your keys at: https://www.google.com/recaptcha/admin/create
+    // Select reCAPTCHA v2 "I'm not a robot" Checkbox
+    'recaptcha_site_key' => '6Lfe4jAsAAAAAE1A23dYGNGzErvCwwndPuA_vPlv',
+    'recaptcha_secret_key' => '6Lfe4jAsAAAAABHBk5R3p9wFDESyz5JdsZoj14zS'
 ];
 ?>

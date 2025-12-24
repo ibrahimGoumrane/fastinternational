@@ -66,6 +66,9 @@
         <i class="fas fa-chevron-up"></i>
     </a>
     
+    <!-- Google reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
     <script src="public/js/script.js"></script>
 </body>
 </html>

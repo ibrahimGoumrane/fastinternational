@@ -503,6 +503,16 @@
                         <textarea id="comments" name="comments" rows="5"></textarea>
                     </div>
                     
+                    <!-- reCAPTCHA Security Check -->
+                    <div class="form-group recaptcha-group <?= !empty($contact_errors['recaptcha']) ? 'has-error' : '' ?>">
+                        <div class="g-recaptcha" 
+                             data-sitekey="<?= $recaptcha_site_key ?>">
+                        </div>
+                        <?php if (!empty($contact_errors['recaptcha'])): ?>
+                            <span class="error-text"><?= $contact_errors['recaptcha'] ?></span>
+                        <?php endif; ?>
+                    </div>
+                    
                     <button type="submit" class="btn btn-primary btn-submit">
                         <i class="fas fa-paper-plane"></i> <?= $this->translate('send_message') ?>
                     </button>

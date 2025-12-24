@@ -430,6 +430,8 @@ return [
     "error_message" => "Error sending message. Please try again.",
     "required_field" => "This field is required",
     "invalid_email" => "Invalid email address",
+    "recaptcha_required" => "Please complete the reCAPTCHA verification.",
+    "recaptcha_failed" => "reCAPTCHA verification failed. Please try again.",
     
     // PayPal
     "paypal_title" => "Secure Payment",
