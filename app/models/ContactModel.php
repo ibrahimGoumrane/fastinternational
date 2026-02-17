@@ -146,7 +146,7 @@ class ContactModel {
         $success = true;
         foreach ($this->config['admin_emails'] as $adminEmail) {
             $this->log("Sending to admin: $adminEmail");
-            $result = $this->sendWithPHPMailer($adminEmail, $subject, $body, $data['email'], $data['name']);
+            $result = $this->sendWithPHPMailer($adminEmail, $subject, $body, $data['email'], $data['name'], $data['name']);
             if (!$result) {
                 $success = false;
                 $this->log("Failed to send to: $adminEmail");
@@ -296,7 +296,7 @@ class ContactModel {
     /**
      * Send email using PHPMailer
      */
-    private function sendWithPHPMailer($to, $subject, $body, $replyTo = null, $replyToName = null) {
+    private function sendWithPHPMailer($to, $subject, $body, $replyTo = null, $replyToName = null, $fromName = null) {
         $this->log("sendWithPHPMailer called - To: $to, Subject: $subject");
         
         try {
@@ -322,8 +322,9 @@ class ContactModel {
             
             $this->log("SMTP Config - Host: {$this->config['host']}, Port: {$this->config['port']}, Auth: " . ($this->config['smtp_auth'] ? 'Yes' : 'No'));
             
-            // Recipients
-            $mail->setFrom($this->config['from_email'], $this->config['from_name']);
+            // Recipients - use user's name as From name for admin notifications
+            $senderName = $fromName ?? $this->config['from_name'];
+            $mail->setFrom($this->config['from_email'], $senderName);
             $mail->addAddress($to);
             
             // Reply-To

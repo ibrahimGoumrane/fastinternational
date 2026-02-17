@@ -6,16 +6,16 @@
 $emailConfig = [
     // SMTP Configuration
     'host' => 'mail.formafast.com',
-    'port' => 25,
+    'port' => 587,
     'smtp_auth' => true,
     'username' => 'mail@formafast.com',
     'password' => 'Mail.Formafast.216',
-    'encryption' => '',  // No encryption for port 25
+    'encryption' => 'tls',  // TLS encryption
     
     // Email addresses
     'from_email' => 'mail@formafast.com',
     'from_name' => 'FAST International',
-    'admin_emails' => ['mail@formafast.com', 'mizoxrizox@gmail.com'],
+    'admin_emails' => ['contact@fastinternational.com', 'mizoxrizox@gmail.com'],
     'reply_to' => 'mail@formafast.com',
     
     // Templates
